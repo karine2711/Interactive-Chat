@@ -9,14 +9,9 @@ public class Main {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
         System.out.println("Please enter the number of members");
         number = scanner.nextInt();
-        for (int i = 0; i < number; i++) {
-            System.out.print("Enter your name  ");
-            members[i] = new Member(scanner.next());
-        }
-
-
-
-            for (int i = 0; i < number; i++) {
+                for (int i = 0; i < number; i++) {
+                System.out.print("Enter your name  ");
+                members[i] = new Member(scanner.next());
                 System.out.println("Hi "+members[i].getFullName()+". Do you want to input message? 1 for 'Yes' and 0 for 'No'");
                 int order = scanner.nextInt();
                 if(order==1) {
