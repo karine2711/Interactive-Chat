@@ -1,46 +1,21 @@
-import java.sql.Time;
 import java.util.*;
+
 public class Member {
-    public String date;
     private String fullName;
-    private String message="";
-private boolean isActive;
-private static int numberOfActiveMembers=0;
-    public boolean isActive() {
-        return isActive;
+
+    private static ArrayList indexesofActiveMembers = new ArrayList();
+
+    public static ArrayList getIndexesofActiveMembers() {
+        return indexesofActiveMembers;
     }
 
-    public void setActive(int order) {
-        if (order==1) {
-            this.isActive = true;
-            Member.numberOfActiveMembers++;
-        } else{
-            this.isActive=false;
-           if(Member.numberOfActiveMembers>0)
-               Member.numberOfActiveMembers--;
-        }
+    public static void setMemberOffline(int i) {
+        Object object = indexesofActiveMembers.get(i);
+        indexesofActiveMembers.remove(object);
     }
-
-
 
     public String getFullName() {
         return fullName;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 
     public Member(String fullName) {
