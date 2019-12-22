@@ -5,13 +5,20 @@ public class Member {
     private String fullName;
     private String message="";
 private boolean isActive;
-
+private static int numberOfActiveMembers=0;
     public boolean isActive() {
         return isActive;
     }
 
-    public void setActive(boolean active) {
-        isActive = active;
+    public void setActive(int order) {
+        if (order==1) {
+            this.isActive = true;
+            Member.numberOfActiveMembers++;
+        } else{
+            this.isActive=false;
+           if(Member.numberOfActiveMembers>0)
+               Member.numberOfActiveMembers--;
+        }
     }
 
 
