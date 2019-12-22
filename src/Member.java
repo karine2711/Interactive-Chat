@@ -4,15 +4,17 @@ public class Member {
     public String date;
     private String fullName;
     private String message="";
-private boolean hasMessage=false;
+private boolean isActive;
 
-    public boolean HasMessage() {
-        return hasMessage;
+    public boolean isActive() {
+        return isActive;
     }
 
-    public void setHasMessage(boolean hasMessage) {
-        this.hasMessage = hasMessage;
+    public void setActive(boolean active) {
+        isActive = active;
     }
+
+
 
     public String getFullName() {
         return fullName;
