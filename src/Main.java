@@ -3,10 +3,15 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Member[] members = new Member[10];
-        int number = 0;
-        System.out.print("Please enter the number of members    ");
+        Member[] members = new Member[30];
+        System.out.println("Please enter the number of members. The maximum number is 30.");
+        System.out.print("Number of members:  ");
+        int number = scanner.nextInt();
+        while (number>=30 || number<=0){
+            System.out.println("Enter a number bigger than 0 and smaller than 30.");
+            System.out.print("Number of members:  ");
         number = scanner.nextInt();
+        }
         Chatting.getMemberList(number, members);
 
         for (int i = 0; i < number; i++)
