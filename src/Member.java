@@ -14,6 +14,7 @@ public class Member {
         indexesofActiveMembers.remove(object);
     }
 
+
     public String getFullName() {
         return fullName;
     }

@@ -44,5 +44,6 @@ public class Chatting {
                 "To avoid this next time, please follow the instructions carefully!");
         Member.setMemberOffline(index);
     }
+
 }
 

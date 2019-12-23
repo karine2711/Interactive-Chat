@@ -12,6 +12,7 @@ public class Main {
             System.out.print("Number of members:  ");
         number = scanner.nextInt();
         }
+
         Chatting.getMemberList(number, members);
 
         for (int i = 0; i < number; i++)
