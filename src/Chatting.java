@@ -14,6 +14,7 @@ public class Chatting {
         }
     }
 
+
     public static int selectRandomMemberIndex() {
         Random rand = new Random();
         ArrayList indexes = Member.getIndexesofActiveMembers();

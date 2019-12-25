@@ -18,7 +18,6 @@ public class Member {
     public String getFullName() {
         return fullName;
     }
-
     public Member(String fullName) {
         this.fullName = fullName;
     }
