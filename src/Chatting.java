@@ -6,7 +6,7 @@ import java.util.Random;
 public class Chatting {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void getMemberList(int number, Member[] members) {
+    public static void initMembers(int number, Member[] members) {
         for (int i = 0; i < number; i++) {
             System.out.print("Enter the name of member" + (i + 1) + ":  ");
             members[i] = new Member(scanner.next());

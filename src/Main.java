@@ -7,7 +7,7 @@ public class Main {
         System.out.print("Number of members:  ");
         int number = scanner.nextInt();
         Member[] members = new Member[number];
-        Chatting.getMemberList(number, members);
+        Chatting.initMembers(number, members);
         for (int i = 0; i < number; i++)
             Member.getIndexesofActiveMembers().add(i);
         System.out.println("Dear members please enter 1 if you wanna continue chatting and 2 if you wanna exit");
