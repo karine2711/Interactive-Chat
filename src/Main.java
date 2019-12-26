@@ -3,18 +3,11 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Member[] members = new Member[30];
         System.out.println("Please enter the number of members. The maximum number is 30.");
         System.out.print("Number of members:  ");
         int number = scanner.nextInt();
-        while (number>=30 || number<=0){
-            System.out.println("Enter a number bigger than 0 and smaller than 30.");
-            System.out.print("Number of members:  ");
-        number = scanner.nextInt();
-        }
-
+        Member[] members = new Member[number];
         Chatting.getMemberList(number, members);
-
         for (int i = 0; i < number; i++)
             Member.getIndexesofActiveMembers().add(i);
         System.out.println("Dear members please enter 1 if you wanna continue chatting and 2 if you wanna exit");
