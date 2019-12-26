@@ -5,7 +5,10 @@ import java.util.Random;
 
 public class Chatting {
     private static Scanner scanner = new Scanner(System.in);
-
+    private static ArrayList indexesofActiveMembers = new ArrayList();
+    public static ArrayList getIndexesofActiveMembers() {
+        return indexesofActiveMembers;
+    }
     public static void initMembers(int number, Member[] members) {
         for (int i = 0; i < number; i++) {
             System.out.print("Enter the name of member" + (i + 1) + ":  ");
