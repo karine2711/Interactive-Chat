@@ -9,12 +9,12 @@ public class Main {
         Member[] members = new Member[number];
         Chatting.initMembers(number, members);
         for (int i = 0; i < number; i++)
-            Member.getIndexesofActiveMembers().add(i);
+            Chatting.getIndexesofActiveMembers().add(i);
         System.out.println("Dear members please enter 1 if you wanna continue chatting and 2 if you wanna exit");
 
-        while (!Member.getIndexesofActiveMembers().isEmpty()) {
+        while (!Chatting.getIndexesofActiveMembers().isEmpty()) {
             int index = Chatting.selectRandomMemberIndex();
-            int currentIndex = (int) Member.getIndexesofActiveMembers().get(index);
+            int currentIndex = (int) Chatting.getIndexesofActiveMembers().get(index);
             Chatting.askForOrder(members[currentIndex]);
             String order = scanner.next();
             int attempts = 0;
@@ -31,7 +31,7 @@ public class Main {
             if (order.equals("2")) {
                 Member.setMemberOffline(index);
             } else if (order.equals("1")) {
-                Chatting.sendMessage(members, currentIndex);
+                members[currentIndex].sendMessage();
             }
         }
     }

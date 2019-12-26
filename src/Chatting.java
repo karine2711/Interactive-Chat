@@ -19,21 +19,10 @@ public class Chatting {
 
     public static int selectRandomMemberIndex() {
         Random rand = new Random();
-        ArrayList indexes = Member.getIndexesofActiveMembers();
-        return rand.nextInt(indexes.size());
-
+        return rand.nextInt(indexesofActiveMembers.size());
     }
 
-    public static void sendMessage(Member[] members, int index) {
-        scanner.nextLine();
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
-        String letterEmoji = String.valueOf(Character.toChars(0x1F4E9));
-        int i = index + 1;
-        System.out.print(letterEmoji + dtf.format(LocalDateTime.now()) + " member" + i + " " + members[index].getFullName() + ":  ");
-        scanner.next();
 
-
-    }
 
     public static void askForOrder(Member member) {
         System.out.println(member.getFullName() + String.valueOf(Character.toChars(0x1F495)));
