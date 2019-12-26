@@ -4,10 +4,9 @@ import java.util.*;
 
 public class Member {
     private String fullName;
-
+private static final  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
     public void sendMessage() {
         Scanner scanner=new Scanner(System.in);
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
         String letterEmoji = String.valueOf(Character.toChars(0x1F4E9));
         int i = Chatting.getIndexesofActiveMembers().indexOf(this);
         System.out.print(letterEmoji + dtf.format(LocalDateTime.now()) + " member" + i + " " + this.getFullName() + ":  ");
