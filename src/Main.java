@@ -20,7 +20,7 @@ public class Main {
             int attempts = 0;
             while (!order.equals("1") && !order.equals("2")) {
                 if (attempts > 2) {
-                    Chatting.kickOut(members[currentIndex], index);
+                    Member.kickOut(members[currentIndex], index);
                     break;
                 }
                 attempts++;

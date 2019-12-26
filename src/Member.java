@@ -16,8 +16,13 @@ private static final  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/
     public static void setMemberOffline(int i) {
        Chatting.getIndexesofActiveMembers().remove(i);
     }
-
-
+    public static void kickOut(Member member, int index) {
+        System.out.println("We're sorry   " + member.getFullName() +
+                String.valueOf(Character.toChars(0x1F61E)) +
+                ". You have been kicked out for interrupting the chat. " +
+                "To avoid this next time, please follow the instructions carefully!");
+        Member.setMemberOffline(index);
+    }
     public String getFullName() {
         return fullName;
     }
@@ -25,4 +30,5 @@ private static final  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/
     public Member(String fullName) {
         this.fullName = fullName;
     }
+
 }

@@ -29,13 +29,7 @@ public class Chatting {
         System.out.print("Your order(1 or 2):  ");
     }
 
-    public static void kickOut(Member member, int index) {
-        System.out.println("We're sorry   " + member.getFullName() +
-                String.valueOf(Character.toChars(0x1F61E)) +
-                ". You have been kicked out for interrupting the chat. " +
-                "To avoid this next time, please follow the instructions carefully!");
-        Member.setMemberOffline(index);
-    }
+
 
 }
 
