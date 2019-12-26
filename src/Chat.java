@@ -29,7 +29,7 @@ public class Chat {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter the number of members. The maximum number is 30.");
+        System.out.println("Please enter the number of members.");
         System.out.print("Number of members:  ");
         int number = scanner.nextInt();
         Member[] members = new Member[number];
