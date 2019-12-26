@@ -26,7 +26,6 @@ private static final  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/
     public String getFullName() {
         return fullName;
     }
-
     public Member(String fullName) {
         this.fullName = fullName;
     }
