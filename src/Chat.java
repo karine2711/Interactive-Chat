@@ -1,9 +1,7 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.Random;
 
-public class Chatting {
+public class Chat {
     private static Scanner scanner = new Scanner(System.in);
     private static ArrayList indexesofActiveMembers = new ArrayList();
 

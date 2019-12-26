@@ -8,13 +8,13 @@ private static final  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/
     public void sendMessage() {
         Scanner scanner=new Scanner(System.in);
         String letterEmoji = String.valueOf(Character.toChars(0x1F4E9));
-        int i = Chatting.getIndexesofActiveMembers().indexOf(this);
+        int i = Chat.getIndexesofActiveMembers().indexOf(this);
         System.out.print(letterEmoji + dtf.format(LocalDateTime.now()) + " member" + i + " " + this.getFullName() + ":  ");
         scanner.next();
     }
 
     public static void setMemberOffline(int i) {
-       Chatting.getIndexesofActiveMembers().remove(i);
+       Chat.getIndexesofActiveMembers().remove(i);
     }
     public static void kickOut(Member member, int index) {
         System.out.println("We're sorry   " + member.getFullName() +
